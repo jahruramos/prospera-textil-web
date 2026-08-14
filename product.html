@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pum White T Shirt — Prospera Textil</title>
+  <meta name="description" content="Pum White T Shirt — oversized fit, soft heavyweight fabric, ribbed cuffs and hem. Part of the Prospera Textil catalog." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <site-nav></site-nav>
+
+  <!-- ===== PRODUCT DETAIL ===== -->
+  <section class="pd">
+    <div class="container">
+      <nav class="pd__crumb" aria-label="Breadcrumb">
+        <a href="catalog.html">Garment</a>
+        <span>/</span>
+        <a href="catalog.html" class="is-current" aria-current="page">T-Shirts</a>
+      </nav>
+    </div>
+
+    <div class="pd__rule"></div>
+
+    <div class="container pd__top">
+      <div class="pd__gallery">
+        <div class="pd__thumbs">
+          <button class="pd__thumb is-active" aria-label="View 1"><img src="assets/product-detail.png" alt="Pum White T Shirt view 1" /></button>
+          <button class="pd__thumb" aria-label="View 2"><img src="assets/product-detail.png" alt="Pum White T Shirt view 2" /></button>
+          <button class="pd__thumb" aria-label="View 3"><img src="assets/product-detail.png" alt="Pum White T Shirt view 3" /></button>
+        </div>
+        <div class="pd__main"><img src="assets/product-detail.png" alt="Pum White T Shirt" /></div>
+      </div>
+
+      <div class="pd__info">
+        <h1 class="pd__title">Pum White T Shirt</h1>
+        <div class="pd__meta">
+          <span>Huckberry</span>
+          <span>2019</span>
+        </div>
+
+        <div class="pd__block">
+          <h2 class="pd__h">Details</h2>
+          <ul class="pd__details">
+            <li><span class="pd__sq"></span>Oversized Fit</li>
+            <li><span class="pd__sq"></span>Soft &amp; Heavyweight Fabric</li>
+            <li><span class="pd__sq"></span>Ribbed cuffs and hem</li>
+            <li><span class="pd__sq"></span>Unisex style</li>
+          </ul>
+        </div>
+
+        <div class="pd__block">
+          <div class="pd__color">
+            <strong>Color:</strong>
+            <span>Off White / Pearl</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== YOU MAY ALSO LIKE ===== -->
+  <section class="section">
+    <div class="container">
+      <h2 class="pd__like-title">You May Also Like</h2>
+      <div class="pd__like">
+        <a class="product-card" href="product.html">
+          <div class="product-card__img"><img src="assets/product-detail.png" alt="Pum White T Shirt" /></div>
+          <h3 class="product-card__title">Pum White T Shirt</h3>
+          <p class="product-card__year">2019</p>
+        </a>
+        <a class="product-card" href="product.html">
+          <div class="product-card__img"><img src="assets/product-detail.png" alt="Pum White T Shirt" /></div>
+          <h3 class="product-card__title">Pum White T Shirt</h3>
+          <p class="product-card__year">2019</p>
+        </a>
+        <a class="product-card" href="product.html">
+          <div class="product-card__img"><img src="assets/product-detail.png" alt="Pum White T Shirt" /></div>
+          <h3 class="product-card__title">Pum White T Shirt</h3>
+          <p class="product-card__year">2019</p>
+        </a>
+        <a class="product-card" href="product.html">
+          <div class="product-card__img"><img src="assets/product-detail.png" alt="Pum White T Shirt" /></div>
+          <h3 class="product-card__title">Pum White T Shirt</h3>
+          <p class="product-card__year">2019</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <site-footer></site-footer>
+
+  <script src="components.js"></script>
+
+  <script>
+    // thumbnail selection — active gets the #CBAC8D border, others #E1D2BA
+    const thumbs = document.querySelectorAll('.pd__thumb');
+    const mainImg = document.querySelector('.pd__main img');
+    thumbs.forEach(t => t.addEventListener('click', () => {
+      thumbs.forEach(x => x.classList.remove('is-active'));
+      t.classList.add('is-active');
+      const src = t.querySelector('img').getAttribute('src');
+      if (mainImg) mainImg.setAttribute('src', src);
+    }));
+  </script>
+
+</body>
+</html>
