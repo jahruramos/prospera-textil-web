@@ -1,4 +1,22 @@
 /* ===== Prospera Textil — Landing ===== */
+@font-face {
+  font-family: "Nexa";
+  src: url("fonts/Nexa-Trial-Regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Nexa";
+  src: url("fonts/Nexa-Trial-Bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Nexa";
+  src: url("fonts/Nexa-Trial-ExtraBold.otf") format("opentype");
+  font-weight: 800;
+  font-style: normal;
+}
 :root {
   --gold: #cbac8d;
   --ink: #1c1a1a;
