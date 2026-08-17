@@ -140,7 +140,7 @@ site-nav, site-footer { display: contents; }
   overflow: hidden;
   min-height: min(855px, 78vh);
   display: flex;
-  align-items: flex-end;
+  align-items: center;
 }
 .hero__bg {
   position: absolute; inset: 0;
