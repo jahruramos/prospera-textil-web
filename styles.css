@@ -567,6 +567,13 @@ site-nav, site-footer { display: contents; }
   background: var(--cream);
   border: 1px solid var(--tan);
   box-sizing: border-box;
+  cursor: pointer;
+  transition: background .3s ease, border-color .3s ease, color .3s ease;
+}
+.flow-step:hover {
+  background: var(--ink);
+  border-color: var(--ink);
+  color: var(--white);
 }
 /* positions — child 1 is .flow__line, cards are 2..9 */
 .flow-step:nth-child(2) { left: 0;      top: 0; }        /* Discovery */
@@ -584,8 +591,10 @@ site-nav, site-footer { display: contents; }
   font-family: var(--sans); font-weight: 700;
   font-size: 1.75cqw; line-height: 1.14; letter-spacing: 0.02em;
   color: var(--gold); margin: 0;
+  transition: color .3s ease;
 }
 .flow-step--active .flow-step__title { color: var(--white); }
+.flow-step:hover .flow-step__title { color: var(--white); }
 
 /* Why Brands Choose Prospera — image cards */
 .why-head { text-align: center; max-width: 1062px; margin-inline: auto; }
